@@ -81,7 +81,7 @@ const dropoutPredictionData = [
   { name: "Grade 12", value: 120 },
 ];
 
-//student data
+//student data removed
 
 const alertsData = [
   {
@@ -472,8 +472,8 @@ const StudentsPage = ({ theme }) => {
   const [studentsData, setStudentsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1); // 👈 New state for total pages
-  const [totalRows, setTotalRows] = useState(0);   // 👈 New state for total rows
+  const [totalPages, setTotalPages] = useState(1); 
+  const [totalRows, setTotalRows] = useState(0);   
   const itemsPerPage = 20;
 
   // Only show these columns
@@ -637,7 +637,7 @@ const StudentsPage = ({ theme }) => {
             </tr>
           </thead>
           <tbody>
-          {/* 👈 Use filteredDisplayData for rendering */}
+          {/*  Using filteredDisplayData for rendering */}
           {filteredDisplayData.map((row, idx) => ( 
             <tr key={idx}>
               {visibleColumns.map((col) => (
@@ -660,7 +660,7 @@ const StudentsPage = ({ theme }) => {
         <div className="flex gap-3">
           <button
             onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-            disabled={currentPage === 1} // 👈 Correct
+            disabled={currentPage === 1} 
             className="px-4 py-2 border rounded-lg disabled:opacity-50"
           >
             Previous
