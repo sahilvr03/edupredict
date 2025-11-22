@@ -482,8 +482,9 @@ const StudentsPage = ({ theme }) => {
     "Age",
     "Absences",
     "StudyTimeWeekly",
-    "GPA",
     "GradeClass",
+    "Predicted GPA",
+    "Dropout Risk",
   ];
 
   useEffect(() => {
